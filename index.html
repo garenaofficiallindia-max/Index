@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#42294d">
+
+<title>Shivi Mehndi Corner</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+-webkit-tap-highlight-color:transparent;
+}
+
+:root{
+--pink:#ff4fc3;
+--cyan:#27f5ff;
+--green:#25D366;
+--bg1:#42294d;
+--bg2:#24182d;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,sans-serif;
+color:#fff;
+overflow-x:hidden;
+-webkit-font-smoothing:antialiased;
+background:
+radial-gradient(circle at 10% 20%,#ff4fc344,transparent 35%),
+radial-gradient(circle at 90% 50%,#27f5ff22,transparent 35%),
+linear-gradient(135deg,var(--bg1),var(--bg2),#56305b);
+}
+
+body:before{
+content:"";
+position:fixed;
+width:260px;
+height:260px;
+border-radius:50%;
+background:#ff4fc3;
+filter:blur(130px);
+opacity:.18;
+animation:bgGlow 10s ease-in-out infinite alternate;
+pointer-events:none;
+will-change:transform;
+}
+
+@keyframes bgGlow{
+to{
+transform:translate3d(70vw,60vh,0);
+}
+}
+
+nav{
+position:sticky;
+top:0;
+z-index:100;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:14px 6%;
+background:#34203dee;
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+border-bottom:1px solid #ff4fc366;
+}
+
+.brand{
+text-align:center;
+}
+
+.brand b{
+font-size:clamp(19px,5vw,30px);
+color:var(--pink);
+text-shadow:0 0 15px var(--pink);
+}
+
+.brand span{
+display:block;
+color:var(--cyan);
+letter-spacing:5px;
+}
+
+.social{
+width:48px;
+height:48px;
+display:grid;
+place-items:center;
+border-radius:15px;
+transition:transform .35s cubic-bezier(.22,1,.36,1);
+transform:translateZ(0);
+}
+
+.social:active{
+transform:scale(.9);
+}
+
+.social svg{
+width:29px;
+height:29px;
+}
+
+.instagram{
+color:#ff65c8;
+border:1px solid #ff65c8;
+box-shadow:0 0 15px #ff65c866;
+}
+
+.whatsapp{
+color:var(--green);
+border:1px solid var(--green);
+box-shadow:0 0 15px #25D36666;
+}
+
+section{
+min-height:100vh;
+padding:75px 7%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero{
+text-align:center;
+}
+
+.logo{
+width:210px;
+height:210px;
+margin:20px auto 30px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:linear-gradient(145deg,#6a315e,#301b3a);
+border:3px solid var(--pink);
+box-shadow:
+0 0 25px var(--pink),
+0 0 60px #27f5ff33;
+animation:logoFloat 4s ease-in-out infinite;
+position:relative;
+will-change:transform;
+transform:translateZ(0);
+}
+
+.logo-art{
+font-size:100px;
+filter:drop-shadow(0 0 12px #ff91d8);
+}
+
+.logo-flower{
+position:absolute;
+font-size:34px;
+animation:spin 10s linear infinite;
+will-change:transform;
+}
+
+.f1{
+top:15px;
+left:18px;
+}
+
+.f2{
+bottom:15px;
+right:18px;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+
+@keyframes logoFloat{
+50%{
+transform:translate3d(0,-12px,0) scale(1.02);
+}
+}
+
+h1,h2{
+text-align:center;
+color:var(--pink);
+text-shadow:0 0 15px #ff4fc388;
+}
+
+h1{
+font-size:clamp(34px,8vw,68px);
+}
+
+h2{
+font-size:clamp(29px,6vw,47px);
+margin-bottom:35px;
+}
+
+.cyan{
+color:var(--cyan);
+}
+
+.script{
+font-family:cursive;
+font-style:italic;
+color:#ff9cdd;
+font-size:clamp(22px,5vw,39px);
+margin-top:10px;
+}
+
+.features,
+.actions,
+.contact-grid{
+width:100%;
+max-width:950px;
+margin:35px auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:22px;
+}
+
+.card,
+.review,
+.btn{
+background:linear-gradient(135deg,#603861dd,#382343dd);
+border:1px solid var(--pink);
+border-radius:19px;
+padding:25px;
+box-shadow:
+0 10px 30px #0004,
+0 0 15px #ff4fc344;
+transform:translateZ(0);
+backface-visibility:hidden;
+}
+
+.card,
+.review{
+transition:
+transform .5s cubic-bezier(.22,1,.36,1),
+box-shadow .5s ease;
+}
+
+.card:hover,
+.review:hover{
+transform:translate3d(0,-8px,0) scale(1.015);
+box-shadow:0 0 30px #ff4fc377;
+}
+
+.card h3{
+color:#ff9cdd;
+margin-bottom:10px;
+}
+
+.btn{
+display:block;
+color:#fff;
+text-decoration:none;
+text-align:center;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:
+transform .3s cubic-bezier(.22,1,.36,1),
+background .3s ease,
+box-shadow .3s ease;
+}
+
+.btn:hover{
+transform:scale(1.035);
+background:#ff4fc333;
+box-shadow:0 0 25px var(--pink);
+}
+
+.btn:active{
+transform:scale(.96);
+}
+
+form{
+width:100%;
+max-width:850px;
+margin:auto;
+padding:30px;
+border:1px solid var(--pink);
+border-radius:22px;
+background:#57345eee;
+box-shadow:
+0 15px 45px #0004,
+0 0 22px #ff4fc344;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:18px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:16px;
+border:1px solid #ff8bd877;
+border-radius:12px;
+background:#35213e;
+color:#fff;
+font-size:16px;
+outline:none;
+transition:
+border-color .25s ease,
+box-shadow .25s ease,
+transform .25s ease;
+}
+
+input::placeholder,
+textarea::placeholder{
+color:#e5c3dd;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:var(--cyan);
+box-shadow:0 0 12px #27f5ff55;
+transform:translateY(-1px);
+}
+
+textarea{
+min-height:110px;
+margin-top:18px;
+resize:vertical;
+}
+
+.gallery{
+width:100%;
+max-width:1050px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:22px;
+}
+
+.design{
+height:310px;
+position:relative;
+overflow:hidden;
+border-radius:20px;
+border:1px solid var(--pink);
+box-shadow:0 10px 30px #0005;
+background:#38213f;
+transition:
+transform .5s cubic-bezier(.22,1,.36,1),
+box-shadow .5s ease;
+transform:translateZ(0);
+backface-visibility:hidden;
+}
+
+.design:hover{
+transform:translate3d(0,-8px,0) scale(1.02);
+box-shadow:0 0 30px #ff4fc388;
+}
+
+.mehndi{
+width:100%;
+height:100%;
+display:grid;
+place-items:center;
+font-size:115px;
+}
+
+.d1{
+background:
+radial-gradient(circle at center,#ff8bd855 0 8%,transparent 9%),
+repeating-radial-gradient(circle,#ff9bd533 0 3px,transparent 5px 22px),
+#5b354e;
+}
+
+.d2{
+background:
+repeating-linear-gradient(45deg,#ff8bd833 0 4px,transparent 4px 20px),
+radial-gradient(circle,#ff4fc355,transparent 60%),
+#49304e;
+}
+
+.d3{
+background:
+repeating-radial-gradient(ellipse,#ffb3dc33 0 5px,transparent 7px 25px),
+#603b55;
+}
+
+.d4{
+background:
+radial-gradient(circle,#ff4fc355 2px,transparent 3px);
+background-size:18px 18px;
+background-color:#4c304e;
+}
+
+.d5{
+background:
+repeating-linear-gradient(-45deg,#27f5ff18 0 4px,transparent 4px 17px),
+#593650;
+}
+
+.d6{
+background:
+repeating-radial-gradient(circle,#ff8bd833 0 7px,transparent 9px 28px),
+#4b2b4b;
+}
+
+.design-name{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+padding:17px;
+background:#27152dee;
+color:#ff9cdd;
+font-weight:bold;
+text-align:center;
+}
+
+.reviews{
+width:100%;
+max-width:800px;
+margin:auto;
+display:grid;
+gap:20px;
+}
+
+.review b{
+color:#ff9cdd;
+}
+
+.stars{
+color:#ffd000;
+font-size:23px;
+margin:8px 0;
+}
+
+.contact-card{
+text-align:center;
+text-decoration:none;
+}
+
+.contact-card svg{
+width:80px;
+height:80px;
+margin-bottom:15px;
+}
+
+.instagram-card{
+color:#ff6aca;
+}
+
+.whatsapp-card{
+color:#25D366;
+border-color:#25D366;
+}
+
+.reveal{
+opacity:0;
+transform:translate3d(0,35px,0);
+transition:
+opacity .7s cubic-bezier(.22,1,.36,1),
+transform .7s cubic-bezier(.22,1,.36,1);
+will-change:transform,opacity;
+}
+
+.reveal.show{
+opacity:1;
+transform:translate3d(0,0,0);
+}
+
+/* ROSE CLICK EFFECT */
+
+.rose{
+position:fixed;
+z-index:9999;
+pointer-events:none;
+font-size:27px;
+will-change:transform,opacity;
+animation:roseFly 1.25s cubic-bezier(.22,1,.36,1) forwards;
+}
+
+@keyframes roseFly{
+
+0%{
+opacity:1;
+transform:
+translate3d(-50%,-50%,0)
+scale(.25)
+rotate(0deg);
+}
+
+55%{
+opacity:1;
+transform:
+translate3d(
+calc(-50% + var(--x)),
+-100px,
+0
+)
+scale(1.05)
+rotate(160deg);
+}
+
+100%{
+opacity:0;
+transform:
+translate3d(
+calc(-50% + var(--x2)),
+-180px,
+0
+)
+scale(.5)
+rotate(300deg);
+}
+
+}
+
+footer{
+text-align:center;
+padding:35px;
+color:#ff9cdd;
+background:#321d3b;
+border-top:1px solid #ff4fc344;
+}
+
+@media(max-width:600px){
+
+section{
+padding:65px 5%;
+}
+
+body:before{
+width:180px;
+height:180px;
+filter:blur(90px);
+}
+
+.logo{
+width:170px;
+height:170px;
+}
+
+.logo-art{
+font-size:78px;
+}
+
+.design{
+height:270px;
+}
+
+.card:hover,
+.review:hover,
+.design:hover{
+transform:none;
+}
+
+.rose{
+font-size:24px;
+}
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+html{
+scroll-behavior:auto;
+}
+
+.logo,
+.logo-flower,
+body:before{
+animation:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<a class="social instagram"
+href="https://www.instagram.com/__ankit__kumar_005?igsh=MWV3ZHRodDR5dmlsNQ=="
+target="_blank">
+
+<svg viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="2">
+
+<rect x="2" y="2"
+width="20"
+height="20"
+rx="5"/>
+
+<circle cx="12"
+cy="12"
+r="4"/>
+
+<circle cx="18"
+cy="6"
+r="1"
+fill="currentColor"/>
+
+</svg>
+
+</a>
+
+<div class="brand">
+
+<b>SHIVI MEHNDI</b>
+
+<span>CORNER</span>
+
+</div>
+
+<a class="social whatsapp"
+href="https://wa.me/919352346932"
+target="_blank">
+
+<svg viewBox="0 0 24 24"
+fill="currentColor">
+
+<path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.1-1.4A10 10 0 1 0 12 2zm4.8 14.2c-.2.6-1.2 1.1-1.7 1.2-.5.1-1.2.2-3.5-.8-2.9-1.2-4.8-4.2-4.9-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 1.9c.1.3.1.5 0 .7l-.5.7c-.2.2-.3.4-.1.7.2.3.8 1.3 1.8 2.1 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.3.7-.2l1.8.9c.3.2.5.2.6.4.1.1.1.6-.1 1.2z"/>
+
+</svg>
+
+</a>
+
+</nav>
+
+
+<section class="hero">
+
+<div class="logo">
+
+<span class="logo-flower f1">🌸</span>
+
+<div class="logo-art">🪷✋</div>
+
+<span class="logo-flower f2">🌿</span>
+
+</div>
+
+<h1>
+
+SHIVI MEHNDI
+
+<span class="cyan">CORNER</span>
+
+</h1>
+
+<p class="script">
+
+Art in your hands, beauty in your style
+
+</p>
+
+
+<div class="features reveal">
+
+<div class="card">
+
+<h3>🏷️ REFERRAL DISCOUNT</h3>
+
+<p>
+Refer your friends and unlock special discounts.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>✨ CUSTOMIZED DESIGNS</h3>
+
+<p>
+Beautiful mehndi designs customized for your style.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>💎 PROFESSIONAL SERVICE</h3>
+
+<p>
+Clean, detailed and premium mehndi work.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="actions">
+
+<a class="btn"
+href="#appointment">
+
+📅 BOOK APPOINTMENT
+
+</a>
+
+<a class="btn"
+href="#designs">
+
+👁 VIEW DESIGNS
+
+</a>
+
+</div>
+
+</section>
+
+
+<section id="appointment">
+
+<h2>BOOK AN APPOINTMENT</h2>
+
+<form id="appointmentForm"
+class="reveal">
+
+<div class="form-grid">
+
+<input
+id="name"
+placeholder="Your Name"
+required>
+
+<input
+id="number"
+type="tel"
+placeholder="Mobile Number"
+required>
+
+<input
+id="address"
+placeholder="Your Address"
+required>
+
+<input
+id="design"
+placeholder="Mehndi Design / Type"
+required>
+
+<input
+id="persons"
+type="number"
+min="1"
+placeholder="Number of Persons"
+required>
+
+<select id="payment" required>
+
+<option value="">
+Select Payment Method
+</option>
+
+<option>Cash</option>
+
+<option>UPI</option>
+
+</select>
+
+<input
+id="date"
+type="date"
+required>
+
+<input
+id="time"
+type="time"
+required>
+
+</div>
+
+<textarea
+id="note"
+placeholder="Special request or message"></textarea>
+
+<button
+class="btn"
+style="width:100%;margin-top:20px"
+type="submit">
+
+CONFIRM APPOINTMENT ON WHATSAPP
+
+</button>
+
+</form>
+
+</section>
+
+
+<section id="designs">
+
+<h2>MEHNDI DESIGNS</h2>
+
+<div class="gallery reveal">
+
+<div class="design">
+
+<div class="mehndi d1">🪷</div>
+
+<div class="design-name">
+Bridal Mehndi
+</div>
+
+</div>
+
+
+<div class="design">
+
+<div class="mehndi d2">🌺</div>
+
+<div class="design-name">
+Floral Mehndi
+</div>
+
+</div>
+
+
+<div class="design">
+
+<div class="mehndi d3">🌿</div>
+
+<div class="design-name">
+Arabic Mehndi
+</div>
+
+</div>
+
+
+<div class="design">
+
+<div class="mehndi d4">🦚</div>
+
+<div class="design-name">
+Peacock Mehndi
+</div>
+
+</div>
+
+
+<div class="design">
+
+<div class="mehndi d5">✋</div>
+
+<div class="design-name">
+Modern Hand Design
+</div>
+
+</div>
+
+
+<div class="design">
+
+<div class="mehndi d6">💮</div>
+
+<div class="design-name">
+Traditional Mehndi
+</div>
+
+</div>
+
+</div>
+
+<p class="script"
+style="text-align:center;margin-top:35px">
+
+Our Best Mehndi Designs
+
+</p>
+
+</section>
+
+
+<section>
+
+<h2>CUSTOMER REVIEWS</h2>
+
+<div class="reviews reveal">
+
+<div class="review">
+
+<b>HAPPY CUSTOMER</b>
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+Amazing designs and very professional work!
+</p>
+
+</div>
+
+
+<div class="review">
+
+<b>PRIYA SHARMA</b>
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+Loved the mehndi. Highly recommended!
+</p>
+
+</div>
+
+
+<div class="review">
+
+<b>NEHA VERMA</b>
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+Beautiful mehndi designs and amazing work ❤️
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2>CONTACT SUPPORT</h2>
+
+<div class="contact-grid reveal">
+
+<a
+class="card contact-card instagram-card"
+href="https://www.instagram.com/__ankit__kumar_005?igsh=MWV3ZHRodDR5dmlsNQ=="
+target="_blank">
+
+<svg viewBox="0 0 24 24"
+fill="none"
+stroke="currentColor"
+stroke-width="1.7">
+
+<rect x="2"
+y="2"
+width="20"
+height="20"
+rx="5"/>
+
+<circle cx="12"
+cy="12"
+r="4"/>
+
+<circle cx="18"
+cy="6"
+r="1"
+fill="currentColor"/>
+
+</svg>
+
+<p>INSTAGRAM</p>
+
+</a>
+
+
+<a
+class="card contact-card whatsapp-card"
+href="https://wa.me/919352346932"
+target="_blank">
+
+<svg viewBox="0 0 24 24"
+fill="currentColor">
+
+<circle cx="12"
+cy="12"
+r="10"/>
+
+<path
+fill="#fff"
+d="M8 7c.5-.5 1-.4 1.3.2l.8 1.8c.2.4 0 .7-.3 1l-.5.5c.8 1.7 2 2.9 3.7 3.7l.5-.6c.3-.3.6-.4 1-.2l1.8.8c.6.3.7.8.2 1.3-.7.8-1.8 1.2-2.9.9-3.6-.9-6.2-3.5-7.1-7.1C6.2 8.2 7.2 7.3 8 7z"/>
+
+</svg>
+
+<p>WHATSAPP</p>
+
+</a>
+
+</div>
+
+<p class="script"
+style="text-align:center">
+
+Thank you for contacting us 🙏
+
+</p>
+
+</section>
+
+
+<footer>
+
+© SHIVI MEHNDI CORNER • Made with Love 🌹
+
+</footer>
+
+
+<script>
+
+/* SMOOTH SCROLL REVEAL */
+
+const elements =
+document.querySelectorAll(".reveal");
+
+const observer =
+new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+},{
+threshold:.12
+});
+
+elements.forEach(element=>
+observer.observe(element)
+);
+
+
+/* ULTRA SMOOTH ROSE CLICK */
+
+let lastRoseTime=0;
+
+document.addEventListener(
+"pointerdown",
+function(e){
+
+const now=performance.now();
+
+if(now-lastRoseTime<160)return;
+
+lastRoseTime=now;
+
+const total=
+window.innerWidth<600 ? 4 : 6;
+
+for(let i=0;i<total;i++){
+
+requestAnimationFrame(()=>{
+
+const rose=
+document.createElement("span");
+
+rose.className="rose";
+
+rose.textContent=
+Math.random()>.35
+? "🌹"
+: "🌸";
+
+rose.style.left=
+e.clientX+"px";
+
+rose.style.top=
+e.clientY+"px";
+
+rose.style.setProperty(
+"--x",
+(Math.random()*100-50)+"px"
+);
+
+rose.style.setProperty(
+"--x2",
+(Math.random()*150-75)+"px"
+);
+
+rose.style.animationDelay=
+(i*.025)+"s";
+
+document.body.appendChild(rose);
+
+rose.addEventListener(
+"animationend",
+()=>rose.remove(),
+{once:true}
+);
+
+});
+
+}
+
+}
+);
+
+
+/* WHATSAPP APPOINTMENT */
+
+const appointmentForm=
+document.getElementById(
+"appointmentForm"
+);
+
+appointmentForm.addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const value=id=>
+document
+.getElementById(id)
+.value
+.trim();
+
+const message=`🌸 *NEW APPOINTMENT - SHIVI MEHNDI CORNER* 🌸
+
+👤 *Name:* ${value("name")}
+📱 *Mobile Number:* ${value("number")}
+📍 *Address:* ${value("address")}
+🎨 *Mehndi Design:* ${value("design")}
+👥 *Number of Persons:* ${value("persons")}
+💳 *Payment Method:* ${value("payment")}
+📅 *Appointment Date:* ${value("date")}
+⏰ *Appointment Time:* ${value("time")}
+📝 *Special Request:* ${value("note") || "None"}
+
+🌹 Please confirm my appointment.`;
+
+const whatsappURL=
+"https://wa.me/919352346932?text="+
+encodeURIComponent(message);
+
+window.location.href=
+whatsappURL;
+
+}
+);
+
+</script>
+
+</body>
+</html>
